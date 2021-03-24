@@ -23,8 +23,8 @@ class SqlChatBase:
             result = int(message_id[0])
             return result
 
-    def update_call_data(self, chat_id, call_data):
-        """ Обновляет call.data у определенного chat_id """
+    def update_last_call(self, chat_id, call_data):
+        """ Обновляет последний call.data у определенного chat_id """
         with self.connection:
             return self.cursor.execute(
                 "UPDATE `chats` SET `last_call` = '?' WHERE `chat_id` = '?'", [call_data, chat_id])

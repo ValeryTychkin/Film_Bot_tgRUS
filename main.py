@@ -49,6 +49,7 @@ def check_list(call):
     elif call.data == 'films':
         genres_lists(calling=call.message.chat.id, text='Выберите жанр фильма', buttons=btns.FILM_GENRES)
     elif call.data[0:2] == 'f_':
+        DB_CHATS.update_last_call(chat_id=call.message.chat.id, call_data=call.data)
         if call.data == 'f_all':
             films_buttons = btns.create_inline_buttons(db=DB_FILMS, genre=call.data)
             genres_lists(calling=call.message.chat.id, text='Все фильмы:', buttons=films_buttons)
