@@ -31,4 +31,4 @@ BOT = tb.TeleBot(token=TOKEN)
   ___
 ## Контакты для Связи
 - __Email__: [valery.tychkin@gmail.com](valery.tychkin@gmail.com)  
-- [Telegram](https://t.me/ILove1337)
+- __Telegram__: [@Kepler186f](https://t.me/Kepler186f)
